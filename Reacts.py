@@ -1,4 +1,4 @@
-#CODE BY Muphy
+#CODE BY LrknCnrd
 import requests
 import re
 import os
@@ -7094,7 +7094,7 @@ def main():
     total_account_rpw, total_pages_rpw = count_tokens(rpwaccounts,rpwpages)
     jovan()
     print(f"       {BG}                                                             {RW} ")
-    print(f"""       {BG}  {Z1} ༺═────────────────{BG1}ACCOUNT OVERVIEWS{RW}{BG}{Z1}───────────────────═༻  {BG}{RW}
+    print(f"""       {BG}  {Z1} ༺═────────────────{BG1}DEVELOPER LARKIN CONRAD{RW}{BG}{Z1}───────────────────═༻  {BG}{RW}
        {BG}                                                             {RW}
        {BG}                    {Z1}𝗙𝗥𝗔 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 {yellow}» {Q}{total_accounts}                        {BG}{RW}
        {BG}                    {Z1}𝗙𝗥𝗔 𝗣𝗔𝗚𝗘𝗦  {yellow} » {Q}{total_pages}                          {BG}{RW}
@@ -7148,4 +7148,5 @@ if __name__ == "__main__":
     
     
     
+
 
