@@ -3660,7 +3660,7 @@ def logo():
 ░░░██║░░░╚██████╔╝██████╔╝██║░░██║
 ░░░╚═╝░░░░╚═════╝░╚═════╝░╚═╝░░╚═╝
                   """,
-           title=f"{Y}COOKIE GETTER", subtitle=f"{R}DEVELOP BY Y U S H ", border_style="bold yellow"))
+           title=f"{Y}COOKIE GETTER", subtitle=f"{R}DEVELOP BY LARKIN ", border_style="bold yellow"))
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -5366,11 +5366,11 @@ def jovan():
        {BG}{Q4}    \ \_____\  \ \_____\  \ \_____\  \/\_____\    \ \_\ {BG}     {RW}
        {BG}{Q5}     \/_____/   \/_____/   \/_____/   \/_____/     \/_/  {BG}    {RW}
        {BG}                                                             {RW}
-       {BG}  {BG1}Uses :{RW} {Q}BOOSTING TOOLS {BG}     {BG1}Version :{RW} {Q} 10.0.2{BG}               {RW}
-       {BG}  {BG1}Tools :{RW} {Q}PREMIUM{BG}            {BG1}Status :{RW} {Q} online{Q}   {BG1}34bit {Q}user{BG}   {RW}
+       {BG}  {BG1}DEVELOPER :{RW} {Q}LARKIN CONRAD {BG}     {BG1}Version :{RW} {Q} 10.0.2{BG}               {RW}
+       {BG}  {BG1}OWNER :{RW} {Q}INO CRESCENT{BG}            {BG1}Status :{RW} {Q} online{Q}   {BG1}34bit {Q}user{BG}   {RW}
        {BG}  {BG1}Boost only :{RW} {lightblue}Facebook {BG}     {BG1}Country :{RW} {Q} Philippines {BG}         {RW}
        {BG}                                                             {RW}
-       {BG}  {hotpink} ━━━━━━━━━━━━━━━━━━ {Q}MARK ABE {hotpink}━━━━━━━━━━━━━━━━━━━━━━━━{BG}   {RW} """)
+       {BG}  {hotpink} ━━━━━━━━━━━━━━━━━━ {Q}LARKIN CONRAD {hotpink}━━━━━━━━━━━━━━━━━━━━━━━━{BG}   {RW} """)
 
 import random
 import string
@@ -7094,7 +7094,7 @@ def main():
     total_account_rpw, total_pages_rpw = count_tokens(rpwaccounts,rpwpages)
     jovan()
     print(f"       {BG}                                                             {RW} ")
-    print(f"""       {BG}  {Z1} ༺═────────────────{BG1}DEVELOPER LARKIN CONRAD{RW}{BG}{Z1}───────────────────═༻  {BG}{RW}
+    print(f"""       {BG}  {Z1} ༺═────────────────{BG1}contact developer on TG @larkinconrad{RW}{BG}{Z1}───────────────────═༻  {BG}{RW}
        {BG}                                                             {RW}
        {BG}                    {Z1}𝗙𝗥𝗔 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 {yellow}» {Q}{total_accounts}                        {BG}{RW}
        {BG}                    {Z1}𝗙𝗥𝗔 𝗣𝗔𝗚𝗘𝗦  {yellow} » {Q}{total_pages}                          {BG}{RW}
@@ -7148,5 +7148,6 @@ if __name__ == "__main__":
     
     
     
+
 
 
