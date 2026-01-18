@@ -9,44 +9,39 @@ CYAN = "\033[96m"
 RESET = "\033[0m"
 BOLD = "\033[1m"
 
-def security_system():
-    os.system("clear")
+os.system("clear")
 
-    print(GREEN + BOLD)
-    print("🔒 SECURE ACCESS SYSTEM 🔒")
-    print("""
+# ---------- SECURITY BANNER ----------
+print(GREEN + BOLD + "🔒 SECURE ACCESS SYSTEM 🔒" + RESET)
+print("""
 ░██████╗███████╗░█████╗░██╗░░░██╗██████╗░██╗████████╗██╗░░░██╗
 ██╔════╝██╔════╝██╔══██╗██║░░░██║██╔══██╗██║╚══██╔══╝╚██╗░██╔╝
 ╚█████╗░█████╗░░██║░░╚═╝██║░░░██║██████╔╝██║░░░██║░░░░╚████╔╝░
 ░╚═══██╗██╔══╝░░██║░░██╗██║░░░██║██╔══██╗██║░░░██║░░░░░╚██╔╝░░
 ██████╔╝███████╗╚█████╔╝╚██████╔╝██║░░██║██║░░░██║░░░░░░██║░░░
 ╚═════╝░╚══════╝░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
-""" + RESET)
+""")
 
-    user_pass = getpass.getpass(CYAN + "🔐 Enter Password: " + RESET)
+# ---------- INPUT ----------
+user_pass = getpass.getpass(CYAN + "🔐 Enter Password: " + RESET)
 
-    if user_pass != PASSWORD:
-        print(RED + "❌ ACCESS DENIED ❌" + RESET)
-        sys.exit()
-
-    os.system("clear")
-    print(GREEN + BOLD + "✅ ACCESS GRANTED ✅" + RESET)
-
-
-# ================= SECURITY SYSTEM END =================
-# >>> PASSWORD IS THE LAST LINE BEFORE TOOL <<<
-
+# ---------- PASSWORD (LAST LINE OF SECURITY SYSTEM) ----------
 PASSWORD = "UNDERLRKNCNRDTOOL"
 
-security_system()
+# ---------- CHECK ----------
+if user_pass != PASSWORD:
+    print(RED + "❌ ACCESS DENIED ❌" + RESET)
+    sys.exit()
+
+# ---------- SUCCESS ----------
+os.system("clear")
+print(GREEN + BOLD + "✅ ACCESS GRANTED ✅" + RESET)
+print("🔓 Tool unlocked successfully ✅")
 
 # ================= YOUR TOOL STARTS HERE =================
 print(CYAN + "\n[+] Running your tool...\n" + RESET)
 
-# your actual tool code below
-
-
-#CODE BY LrknCnrd
+# CODE BY LRKNCONRD
 import requests
 import re
 import os
