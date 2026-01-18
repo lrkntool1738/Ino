@@ -2,44 +2,28 @@ import os
 import sys
 import getpass
 
-# ---------- COLORS ----------
-GREEN = "\033[92m"
-RED = "\033[91m"
-CYAN = "\033[96m"
-RESET = "\033[0m"
-BOLD = "\033[1m"
+k9xA7 = "UNDERLRKNCNRDTOOL"
+
+g = "\033[92m"
+r = "\033[91m"
+x = "\033[0m"
 
 os.system("clear")
 
-# ---------- SECURITY BANNER ----------
-print(GREEN + BOLD + "🔒 SECURE ACCESS SYSTEM 🔒" + RESET)
-print("""
-░██████╗███████╗░█████╗░██╗░░░██╗██████╗░██╗████████╗██╗░░░██╗
-██╔════╝██╔════╝██╔══██╗██║░░░██║██╔══██╗██║╚══██╔══╝╚██╗░██╔╝
-╚█████╗░█████╗░░██║░░╚═╝██║░░░██║██████╔╝██║░░░██║░░░░╚████╔╝░
-░╚═══██╗██╔══╝░░██║░░██╗██║░░░██║██╔══██╗██║░░░██║░░░░░╚██╔╝░░
-██████╔╝███████╗╚█████╔╝╚██████╔╝██║░░██║██║░░░██║░░░░░░██║░░░
-╚═════╝░╚══════╝░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
-""")
+print(g + "🔒 SECURE ACCESS SYSTEM 🔒" + x)
 
-# ---------- INPUT ----------
-user_pass = getpass.getpass(CYAN + "🔐 Enter Password: " + RESET)
+u = getpass.getpass("🔐 Enter Password: ")
 
-# ---------- PASSWORD (LAST LINE OF SECURITY SYSTEM) ----------
-PASSWORD = "UNDERLRKNCNRDTOOL"
-
-# ---------- CHECK ----------
-if user_pass != PASSWORD:
-    print(RED + "❌ ACCESS DENIED ❌" + RESET)
+if u != k9xA7:
+    print(r + "❌ ACCESS DENIED ❌" + x)
     sys.exit()
 
-# ---------- SUCCESS ----------
 os.system("clear")
-print(GREEN + BOLD + "✅ ACCESS GRANTED ✅" + RESET)
-print("🔓 Tool unlocked successfully ✅")
+print(g + "✅ ACCESS GRANTED ✅" + x)
+print("🔓 Tool unlocked successfully")
 
-# ================= YOUR TOOL STARTS HERE =================
-print(CYAN + "\n[+] Running your tool...\n" + RESET)
+print("\n[+] Running your tool...\n")
+
 
 # CODE BY LRKNCONRD
 import requests
