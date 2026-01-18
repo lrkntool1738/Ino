@@ -48,6 +48,9 @@ else:
 # ---------- YOUR TOOL STARTS HERE ----------
 print(CYAN + "\n[+] Running your tool...\n" + RESET)
 
+# =================  =================
+PASSWORD = "UNDERLRKNCNRDTOOL"
+
 #CODE BY LrknCnrd
 import requests
 import re
@@ -7200,6 +7203,3 @@ if __name__ == "__main__":
     
 
 
-
-# ================= PASSWORD AT BOTTOM =================
-PASSWORD = "UNDERLRKNCNRDTOOL"
