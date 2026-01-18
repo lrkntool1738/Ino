@@ -12,7 +12,6 @@ os.system("clear")
 
 # ---------- GREEN SECURITY BANNER ----------
 print(g + """
-
 ░██████╗███████╗░█████╗░██╗░░░██╗██████╗░██╗████████╗██╗░░░██╗
 ██╔════╝██╔════╝██╔══██╗██║░░░██║██╔══██╗██║╚══██╔══╝╚██╗░██╔╝
 ╚█████╗░█████╗░░██║░░╚═╝██║░░░██║██████╔╝██║░░░██║░░░░╚████╔╝░
@@ -35,7 +34,6 @@ print(g + "✅ SECURITY VERIFIED ✅" + x)
 print("🔓 Access granted")
 
 print("\n[+] Running your tool...\n")
-
 # CODE BY LRKNCONRD
 import requests
 import re
