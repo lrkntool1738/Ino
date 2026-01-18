@@ -4,13 +4,15 @@ import sys
 import time
 import os
 
+TOOL_PASSWORD = None  # declared here, value set at bottom
+
 GREEN = "\033[92m"
 RED = "\033[91m"
 RESET = "\033[0m"
 
 os.system("clear")
 
-# FIRST BANNER (BEFORE PASSWORD)
+# FIRST BANNER
 print(GREEN + """
 ░██████╗███████╗░█████╗░██╗░░░██╗██████╗░██╗████████╗██╗░░░██╗
 ██╔════╝██╔════╝██╔══██╗██║░░░██║██╔══██╗██║╚══██╔══╝╚██╗░██╔╝
@@ -20,23 +22,20 @@ print(GREEN + """
 ╚═════╝░╚══════╝░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
 """ + RESET)
 
-print(GREEN + "[•] WELCOME TO LARKIN CONRAD TOOL" + RESET)
-print(GREEN + "[•] SECURITY CHECK ENABLED" + RESET)
-print(GREEN + "[•] CONTACT DEVELOPER: LARKIN CONRAD | TG @larkinconrad" + RESET)
-print(GREEN + "[•] FOR PASSWORD ACCESS" + RESET)
+print(GREEN + "🔒 [ SECURITY CHECK ENABLED ]" + RESET)
+print(GREEN + "🔒 CONTACT DEVELOPER: LARKIN CONRAD | TG @larkinconrad" + RESET)
 print(GREEN + "-" * 50 + RESET)
 
-user_pass = input(GREEN + "[+] ENTER PASSWORD: " + RESET)
+user_pass = input(GREEN + "🔒 ENTER PASSWORD: " + RESET)
 
 if user_pass != TOOL_PASSWORD:
-    print(RED + "\n[!] WRONG PASSWORD!" + RESET)
-    print(RED + "[!] ACCESS DENIED." + RESET)
+    print(RED + "\n🔒 [ WRONG PASSWORD ]" + RESET)
+    print(RED + "🔒 ACCESS DENIED" + RESET)
     sys.exit()
 
-# CLEAR SCREEN AFTER SUCCESS
 os.system("clear")
 
-# SECOND BANNER (AFTER PASSWORD CORRECT)
+# SECOND BANNER (AFTER SUCCESS)
 print(GREEN + """
 ░██████╗██╗░░░██╗░█████╗░░█████╗░███████╗░██████╗░██████╗
 ██╔════╝██║░░░██║██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -46,8 +45,8 @@ print(GREEN + """
 ╚═════╝░░╚═════╝░░╚════╝░░╚════╝░╚══════╝╚═════╝░╚═════╝░
 """ + RESET)
 
-print(GREEN + "[✓] PASSWORD CORRECT" + RESET)
-print(GREEN + "[✓] ACCESS GRANTED" + RESET)
+print(GREEN + "✅ PASSWORD CORRECT" + RESET)
+print(GREEN + "✅ ACCESS GRANTED" + RESET)
 time.sleep(1)
 
 # ===== YOUR TOOL CODE STARTS BELOW =====
@@ -7199,10 +7198,5 @@ if __name__ == "__main__":
        main()
    
     
-    
-    
-
-
-
 # ===== PASSWORD (BOTTOM) =====
 TOOL_PASSWORD = "LARKINCONRADTOOL"
