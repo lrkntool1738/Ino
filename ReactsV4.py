@@ -22,6 +22,7 @@ print(g + """
 
 print(g + "🔒 SECURITY SYSTEM 🔒" + x)
 print(g + "AUTHORIZED ACCESS ONLY" + x)
+print(g + "CONTACT DEVELOPER ON TG @larkinconrad" + x)
 
 u = getpass.getpass("🔐 Enter Security Key: ")
 
@@ -34,6 +35,7 @@ print(g + "✅ SECURITY VERIFIED ✅" + x)
 print("🔓 Access granted")
 
 print("\n[+] Running your tool...\n")
+
 # CODE BY LRKNCONRD
 import requests
 import re
