@@ -2,7 +2,7 @@ import os
 import sys
 import getpass
 
-k9xA7 = "UNDERLRKNCNRDTOOL"
+sX9Q = "UNDERLRKNCNRDTOOL"
 
 g = "\033[92m"
 r = "\033[91m"
@@ -10,20 +10,30 @@ x = "\033[0m"
 
 os.system("clear")
 
-print(g + "🔒 SECURE ACCESS SYSTEM 🔒" + x)
+# ---------- GREEN SECURITY BANNER ----------
+print(g + """
+░██████╗███████╗░█████╗░██╗░░░██╗██████╗░██╗████████╗██╗░░░██╗
+██╔════╝██╔════╝██╔══██╗██║░░░██║██╔══██╗██║╚══██╔══╝╚██╗░██╔╝
+╚█████╗░█████╗░░██║░░╚═╝██║░░░██║██████╔╝██║░░░██║░░░░╚████╔╝░
+░╚═══██╗██╔══╝░░██║░░██╗██║░░░██║██╔══██╗██║░░░██║░░░░░╚██╔╝░░
+██████╔╝███████╗╚█████╔╝╚██████╔╝██║░░██║██║░░░██║░░░░░░██║░░░
+╚═════╝░╚══════╝░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
+""" + x)
 
-u = getpass.getpass("🔐 Enter Password: ")
+print(g + "🔒 SECURITY SYSTEM 🔒" + x)
+print(g + "AUTHORIZED ACCESS ONLY" + x)
 
-if u != k9xA7:
-    print(r + "❌ ACCESS DENIED ❌" + x)
+u = getpass.getpass("🔐 Enter Security Key: ")
+
+if u != sX9Q:
+    print(r + "❌ SECURITY CHECK FAILED ❌" + x)
     sys.exit()
 
 os.system("clear")
-print(g + "✅ ACCESS GRANTED ✅" + x)
-print("🔓 Tool unlocked successfully")
+print(g + "✅ SECURITY VERIFIED ✅" + x)
+print("🔓 Access granted")
 
 print("\n[+] Running your tool...\n")
-
 
 # CODE BY LRKNCONRD
 import requests
