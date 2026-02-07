@@ -222,20 +222,20 @@ def register_account():
         cookies = ses.cookies.get_dict()
         if "c_user" in cookies:
             uid = cookies["c_user"]
-            print(Panel(f"{G}[{Y}✅{G}]{W} SUCCESS UID/EMAIL: {G}{uid}\n{G}[{Y}🔑{G}]{W} PASSWORD: {G}{password}))
+            print(Panel(f"{G}[{Y}✅{G}]{W} SUCCESS UID/EMAIL: {G}{uid}\n{G}[{Y}🔑{G}]{W} PASSWORD: {G}{password})
             code = get_temp_code(email)
             time.sleep(3)
-            print(Panel(f"{G}[{Y}🔑{G}] CODE  : {code}))
+            print(Panel(f"{G}[{Y}🔑{G}] CODE  : {code})
             if code:
                 confirm_id(email, uid, code, reg.text, ses, password)
             else:
-                print(Panel(f"{R}⚠️ OTP not received for: {email}))
+                print(Panel(f"{R}⚠️ OTP not received for: {email})
             live += 1
         else:
-            print(Panel(f"{R}Failed Checkpoint 🚨))
+            print(Panel(f"{R}Failed Checkpoint 🚨)
             cp += 1
     except requests.exceptions.ConnectionError:
-        print(Panel(f"{R}(!!) Internet Connection Error!"))
+        print(Panel(f"{R}(!!) Internet Connection Error!")
         time.sleep(2)
         exit(1)
         
