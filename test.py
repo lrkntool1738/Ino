@@ -183,11 +183,4 @@ def register_account():
         reg = ses.post('https://m.facebook.com/reg/submit/', data=payload, headers=headers)
         cookies = ses.cookies.get_dict()
         if "c_user" in cookies:
-            uid = cookies["c_user"]
-            print(f"{uid}|{password}")
-            code = get_temp_code(email)
-            time.sleep(3)
-            if code:
-                confirm_id(email, uid, code, reg.text, ses, password)
-            else:
-               
+            uid = cookies["
