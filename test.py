@@ -1,4 +1,3 @@
-#code by lrkn
 import os, re, time, json, random
 import requests
 from faker import Faker
