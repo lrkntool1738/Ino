@@ -112,4 +112,83 @@ def confirm_id(mail, uid, otp, data, ses, password):
             'sec-ch-ua-mobile': "?1",
             'x-asbd-id': "129477",
             'x-fb-lsd': "KnpjLz-YdSXR3zBqds98cK",
-            'sec-ch-prefers-color-scheme': "lig
+            'sec-ch-prefers-color-scheme': "light",  # <-- Fixed here
+            'sec-ch-ua-platform-version': "\"\"",
+            'origin': "https://m.facebook.com",
+            'x-requested-with': "mark.via.gp",
+            'sec-fetch-site': "same-origin",
+            'sec-fetch-mode': "cors",
+            'sec-fetch-dest': "empty",
+            'referer': "https://m.facebook.com/confirmemail.php?next=https%3A%2F%2Fm.facebook.com%2F%3Fdeoia%3D1&soft=hjk",
+            'accept-language': "en-GB,en-US;q=0.9,en;q=0.8",
+            'priority': "u=1, i"
+        }
+        response = ses.post(url, params=params, data=payload, headers=headers)
+        if "checkpoint" in str(response.url):
+            print(f"{uid}|{password}")
+        else:
+            cookie = ";".join([f"{k}={v}" for k, v in ses.cookies.get_dict().items()])
+            print(f"{uid}|{password}")
+            save_result(uid, password, cookie)
+    except Exception:
+        print(f"{uid}|{password}")
+
+def register_account():
+    global live, cp
+    try:
+        ses = requests.Session()
+        res = ses.get('https://touch.facebook.com/reg')
+        form = extract_form(res.text)
+        fname, lname = faker.first_name(), faker.last_name()
+        phone = get_bd_number()
+        email = get_temp_email()
+        password = fake_password()
+        payload = {
+            'ccp': '2',
+            'reg_instance': form.get('reg_instance'),
+            'reg_impression_id': form.get('reg_impression_id'),
+            'logger_id': form.get('logger_id'),
+            'firstname': fname,
+            'lastname': lname,
+            'birthday_day': str(random.randint(1, 28)),
+            'birthday_month': str(random.randint(1, 12)),
+            'birthday_year': 2004,
+            'reg_email__': email,
+            'reg_passwd__': password,
+            'sex': '2',
+            'encpass': f'#PWD_BROWSER:0:{int(time.time())}:{password}',
+            'submit': 'Sign Up',
+            'fb_dtsg': form.get('fb_dtsg', ''),
+            'jazoest': form.get('jazoest'),
+            'lsd': form.get('lsd'),
+            '__dyn': '', '__csr': '', '__req': 'q', '__a': '', '__user': '0'
+        }
+        headers = {'authority': 'm.facebook.com',
+                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'accept-language': 'en-US;q=0.8,en;q=0.7',
+                'cache-control': 'max-age=0',
+                'dpr': '2',
+                'referer': 'https://m.facebook.com/login/save-device/',
+                'sec-ch-prefers-color-scheme': 'light',
+                'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="125", "Google Chrome";v="125"',
+                'sec-ch-ua-mobile': '?1',
+                'sec-ch-ua-platform': '"Android"',
+                'sec-fetch-dest': 'document',
+                'sec-fetch-mode': 'navigate',
+                'sec-fetch-site': 'same-origin',
+                'sec-fetch-user': '?1',
+                'upgrade-insecure-requests': '1',
+                'user-agent': ugen(),
+                'viewport-width': '980'
+        }
+        reg = ses.post('https://m.facebook.com/reg/submit/', data=payload, headers=headers)
+        cookies = ses.cookies.get_dict()
+        if "c_user" in cookies:
+            uid = cookies["c_user"]
+            print(f"{uid}|{password}")
+            code = get_temp_code(email)
+            time.sleep(3)
+            if code:
+                confirm_id(email, uid, code, reg.text, ses, password)
+            else:
+               
