@@ -5,7 +5,7 @@ from faker import Faker
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 from datetime import datetime
-from rich import print 
+from rich import print
 from rich.panel import Panel
 from rich.console import Console
 from rich.prompt import Prompt
@@ -43,7 +43,7 @@ def fake_password():
 
 def get_temp_email():
     name = faker.first_name()
-    domain = random.choice(['gmailos.com', 'hotmail.com','outlook.com','yahoo.com',])
+    domain = random.choice(['gmailos.com', 'hotmail.com', 'outlook.com', 'yahoo.com'])
     timestamp = datetime.now().strftime("%H%M%S")
     return f"{name}.{timestamp}@{domain}"
 
@@ -72,8 +72,7 @@ def get_bd_number():
     na = random.choice(['77', '78', '59'])
     ni = str(random.randrange(1000, 10000))
     nu = str(random.randrange(10000, 100000))
-    nope = '+639%s%s%s' % (na, ni, nu)
-    return nope
+    return '+639%s%s%s' % (na, ni, nu)
 
 def extract_form(html):
     soup = BeautifulSoup(html, 'html.parser')
@@ -189,3 +188,7 @@ def register_account():
             print(f"{uid}|{password}")
             code = get_temp_code(email)
             time.sleep(3)
+            if code:
+                confirm_id(email, uid, code, reg.text, ses, password)
+            else:
+                print(f"{uid}|{password}")
