@@ -1,8 +1,4 @@
-It seems like you want the script to print the UID and password in the format `uid|pass` without any additional output or unnecessary comments. I will remove the `#` and clean up the code for that purpose.
-
-Here’s the updated code:
-
-```python
+#code by lrkn
 import os, re, time, json, random
 import requests
 from faker import Faker
