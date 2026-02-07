@@ -188,5 +188,4 @@ def register_account():
             uid = cookies["c_user"]
             print(f"{uid}|{password}")
             code = get_temp_code(email)
-            time.sleep(3
-```
+            time.sleep(3)
