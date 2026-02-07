@@ -221,23 +221,24 @@ def register_account():
         reg = ses.post('https://m.facebook.com/reg/submit/', data=payload, headers=headers)
         cookies = ses.cookies.get_dict()
         if "c_user" in cookies:
-            uid = cookies["c_user"]
-            print(Panel(f"{G}[{Y}✅{G}]{W} SUCCESS UID/EMAIL: {G}{uid}\n{G}[{Y}🔑{G}]{W} PASSWORD: {G}{password})
-            code = get_temp_code(email)
-            time.sleep(3)
-            print(Panel(f"{G}[{Y}🔑{G}] CODE  : {code})
-            if code:
-                confirm_id(email, uid, code, reg.text, ses, password)
-            else:
-                print(Panel(f"{R}⚠️ OTP not received for: {email})
-            live += 1
-        else:
-            print(Panel(f"{R}Failed Checkpoint 🚨)
-            cp += 1
-    except requests.exceptions.ConnectionError:
-        print(Panel(f"{R}(!!) Internet Connection Error!")
-        time.sleep(2)
-        exit(1)
+        uid = cookies["c_user"]
+        print(f"{G}[{Y}✅{G}]{W} ALIVE UID CREATED: {G}{uid}\n{G}[{Y}🔑{G}]{W} PASSWORD: {G}{password}")
+        code = get_temp_code(email)
+        time.sleep(3)
+        print(f"{G}[{Y}🔑{G}] CODE  : {code}")
+        if code:
+        confirm_id(email, uid, code, reg.text, ses, password)
+    else:
+        print(f"{R}⚠️ OTP not received for: {email}")
+    live += 1
+else:
+    print(f"{R}Failed Checkpoint 🚨")
+    cp += 1
+except requests.exceptions.ConnectionError:
+    print(f"{R}(!!) Internet Connection Error!")
+    time.sleep(2)
+    exit(1)
+
         
 def main():
     clear()
