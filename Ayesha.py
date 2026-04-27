@@ -539,7 +539,7 @@ attemps = 0
 while attemps < 12345677901:
     username = input(' \033[0;92m𝐄𝐍𝐓𝐄𝐑 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄: ')
     password = input(' \033[0;93m𝐄𝐍𝐓𝐄𝐑 𝐏𝐀𝐒𝐒𝐖𝐎𝐑𝐃: ')
-    if username == 'A'YESHA and password == 'AYESHA_KHAN':
+    if username == 'AYESHA' and password == 'AYESHA_KHAN':
         print(' \033[0;92m𝐘𝐎𝐔 𝐇𝐀𝐕𝐄 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋 𝐋𝐎𝐆𝐈𝐍𝐆.')
         break
     else:
